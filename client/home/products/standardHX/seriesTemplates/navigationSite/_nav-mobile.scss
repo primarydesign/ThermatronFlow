@@ -1,0 +1,144 @@
+
+
+
+@media (max-width:768px){
+	#series-informants-nav{
+		display:none;
+	}
+}
+
+
+
+#mobile-nav {
+
+
+
+	height: 100%;width:260px;
+	position: fixed;
+	top:0;right:0;
+	z-index: 90;
+	background: $nav-colors-mobile;
+	background: $darkBlue;
+
+	ul.nav-tier {
+		height: 100%;
+		//overflow-x: hidden;
+		//overflow-y: auto;
+		position: fixed;
+		top:0;right:0;
+		width: 260px;
+		background: $darkBlue;
+
+		li {
+			box-sizing: border-box;
+			overflow: auto;
+			width: 100%;
+		}
+		li a:hover{
+			color:$ltblue;
+			
+		}
+		li:hover{
+			//background:$ltblue;
+		}
+		a {
+			border-bottom: 1px solid $nav-colors-mb-garnish;
+			color: rgba($nav-font-color, .9);
+			font-family: $nav-font-family;
+			font-size: .7em;
+			letter-spacing: 2px;
+			text-overflow: ellipsis;
+			text-transform: uppercase;
+			white-space: nowrap;
+			box-sizing: border-box;
+			display: block;
+			height: 45px;
+			line-height: 45px;
+			overflow: hidden;
+			padding: 0 30px 0 20px;
+			vertical-align: middle;
+			width: calc(100%);
+		}
+		li.has-children > a, li.return > a {
+			position: relative;
+			&::before, &::after {
+				content: '';
+				display: inline-block;
+				height: 2px;width: 10px;
+				position: absolute;
+				top: 50%; margin-top: -3px;
+				vertical-align: middle;
+				background: lighten($nav-colors-mobile, 10%);
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+			}
+			&::before {
+				transform: rotate(45deg);
+			}
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
+		li.has-children a {
+			padding-right: 35px;
+			&::before, &::after {
+				right: 20px !important;
+				transform-origin: 9px 50%;
+			}
+		}
+		li.return a {
+			padding-left: 40px;
+			width: calc(100%);
+			&::before, &::after {
+				left: 20px !important;
+				transform-origin: 1px 50%;
+			}
+		}
+	}
+}
+
+
+
+
+/*******************/
+/* ARCHIVED STYLES */
+/*******************/
+
+/* CLASSY FUNCTIONALITY */
+#mobile-nav {
+	&, ul, a {
+		transition: transform .3s;
+	}
+}
+.nx-visible {
+	transform: translateX(0);
+    opacity: 1;
+}
+.nx-hidden, .nx-right {
+	transform: translateX(100%);
+    opacity: 0;
+}
+.nx-left > li > a {
+	transform: translateX(-100%);
+	transition: transform .3s;
+	//opacity: 0;
+}
+body {
+	& > * {
+		// transition: transform .3s;
+	}
+	& > *:not(#mobile-nav){
+		// transform: translateX(0);
+	}
+	&.nav-in-view > *:not(#mobile-nav) {
+		// transform: translateX(-260px);
+	}
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+

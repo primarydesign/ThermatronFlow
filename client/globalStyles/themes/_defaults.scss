@@ -1,0 +1,39 @@
+* {
+	margin:0;
+	padding:0;
+	font-family: $open-sans;
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	font-size:1em;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a, address {
+	color: inherit;
+	font-style: normal;
+	text-decoration: none;
+}
+
+a {cursor: pointer !important;}
+
+li {
+	list-style: none;
+}
+
+/*
+ * PSEUDO-ELEMENTS
+ * pre-style for convenience
+ */
+%pseudo {
+	content: '';
+	height: 100%;
+	position: absolute;
+	top: 0;left: 0;
+	width: 100%;
+}

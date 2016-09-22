@@ -1,0 +1,229 @@
+/*BUILDING BLOCKS*/
+
+#building-blocks{
+	margin: 0em;
+	padding: 0em;
+    .building-blocks-column__title {
+        font-size: 1.3em; //1.5em;
+        padding-bottom: 1em;
+        color: $darkBlue;
+	text-transform:uppercase;
+	white-space: nowrap;//
+	
+    }
+    .wdl-list{
+        text-align: left;
+        h4 {
+     		// margin: 15px 8%;
+            margin: 15px 3%;
+            margin: 15px 6.5%;
+	    
+            font-size: .85em;
+            color:$darkBlue;
+            text-transform: uppercase;
+            font-weight:600;    
+        }
+        li {
+            position: relative;	    
+        	// margin: 0 6% 10px 12%;
+	    margin: 0 10.5% 10px 10.5%;
+            list-style-type: disc;
+            font-size: 13px;
+            color: $gray;   
+        }
+    }
+    .graph__title {
+        //margin: 2.5em 3% .5em;
+        margin: 2.5em 6.5% .5em;
+	
+        font-size: 1.25em;
+        line-height: 1.3em;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $darkBlue;
+    
+        .graph__specs, .graph__properties {
+            display: block;
+            font-weight: normal;
+            font-size: 1rem;
+        }
+        .graph__specs {
+            font-style: italic;
+        }
+        .graph__properties {
+            text-transform: none;
+        }
+    }    
+
+
+}
+#building-blocks .img-container{
+	text-align:center;
+}
+#building-blocks-table{
+	width: 100%;
+	text-align: center;
+}
+
+#building-blocks-table .img-container{
+    padding-top: 30px;
+}
+
+#building-blocks-table th{
+	position: relative;
+	bottom: -50px;
+}
+
+#building-blocks-table td {
+	padding:1em;
+	float:left;
+	display:block;
+	margin: 0;
+	background: $ltGray;
+	padding: 0;	
+	height:auto;
+}
+
+
+
+#building-blocks .graphs h4{
+	padding:2em;
+	color:$darkBlue;
+	font-size:1.1em;
+
+}
+
+
+@media(max-width:600px){ //MOBILE ONLY
+	#building-blocks-table .img-container{
+
+	}
+	#building-blocks-table .img-container img {
+		/*height: 150px;*/
+		width: 90vw;
+		position: relative;
+	}
+    #building-blocks-table .performance-chart--chart {
+        width: 90vw;
+    }
+	#building-blocks-table td{
+		width: 100vw;
+	}
+	
+
+}
+
+
+@media(min-width:600px) {
+
+	#building-blocks-table .img-container{
+		height:auto;
+		
+	}
+	#building-blocks-table .img-container img, #building-blocks-table .graphs img{
+		/*height: 150px;*/
+		width: 100%;
+		position: relative;
+	}
+	#building-blocks-table td{
+		width: 30%;
+        padding: 0 1.5%;
+		margin: 0;
+	}
+	.building-blocks-columm--middle {
+		margin: 0 0.5% !important;
+	}
+	
+}
+
+
+
+
+@media(max-width:600px){
+
+#accordion .pointer{
+	font-size:35px;
+}
+
+#accordion section, #accordion .pointer, #accordion h1, #accordion p {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#accordion {
+  margin-bottom:1px;
+}
+#accordion h1 {
+  line-height:1.2;
+  font-size:15px;
+  text-transform:uppercase;
+
+  color:white;
+  background-color:$medBlue;
+  margin:0;
+  padding: 10px 10px 10px 10px;
+}
+
+#accordion h1 a {
+  color:black;
+  color:white;
+  
+}
+#accordion section {
+  overflow:hidden;
+  height:2600px;
+  background:$ltGray;
+}
+#accordion p {
+  padding:0 10px;
+  color:white;
+}
+#accordion section.ac_hidden p:not(.pointer) {
+  color:#fff;
+}
+
+#accordion section.ac_hidden {
+  height:44px;
+}
+#accordion .pointer {
+  padding:0;
+  margin:10px 0 0 6px;
+  line-height:20px;
+  width:13px;
+  position:absolute;
+}
+#accordion section:not(.ac_hidden) h1 {
+  //background-color:rgba(255,0,0,0.7);
+}
+
+#accordion section:not(.ac_hidden) .pointer {
+  display:block;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+  padding:0;
+  margin-top:8px; 
+}
+
+}
+
+.ac_hidden i {
+	font-weight:600;
+}
+
+@media(min-width:600px){ //MOBILE ONLY
+    #building-blocks{
+
+        section{
+            overflow:visible !important;
+        }
+        #accordion .pointer, #accordion .link{
+                display:none !important;
+        }
+
+    }
+}
+

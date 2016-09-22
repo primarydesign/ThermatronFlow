@@ -1,0 +1,78 @@
+#back-to-top {
+	cursor: pointer;
+	//display: none;
+	bottom: 0; right: -103px;
+	box-sizing: border-box;
+	height: 30px;
+	opacity: 0.7;
+	padding: 0 15px;
+	position: fixed;
+	width: 160px;
+	z-index: 50;
+	background: rgba(117,178,228, 1);
+	transform-origin: bottom right;
+	transition: all 600ms ease;
+	&:hover {
+		opacity: 0.8;
+	}
+	font-family:$open-sans;
+}
+#back-to-top::before {
+	@extend %pseudo;
+	height: 0;
+	width: 0;
+	border-style: solid;
+	border-width: 0 0 30px 10px;
+	border-color: transparent;
+	border-bottom-color: rgba(117,178,228, 1);
+	transform: translateX(-100%);
+}
+.back-to-top--type {
+	display: inline-block;
+	opacity: 0.7;
+	padding-left: 12px;
+	text-transform: uppercase;
+	vertical-align: top;
+	color: rgba($noir-2, 1);
+	font-size: 0.8em;
+	font-weight: 400;
+	line-height: 30px;
+}
+.back-to-top--arrow {
+	display: inline-block;
+	height: 100%;
+	opacity: 0.7;
+	overflow: hidden;
+	position: relative;
+	width: 25px;
+	&::before, &::after {
+		@extend %pseudo;
+		height: 4px;
+		top: 6px ;
+		background: rgba($noir-2, 1);
+	}
+	&:before {
+		left: 50%;
+		transform: rotate(40deg);
+		transform-origin: top left;
+	}
+	&::after {
+		left: auto;
+		right: 50%;
+		transform: rotate(-40deg);
+		transform-origin: top right;
+	}
+}
+
+#back-to-top:hover {
+	opacity: 1;
+	right: 0 !important;
+}
+
+@media(max-width:900px){
+
+	#back-to-top{
+		right: 0 !important;
+	}
+
+}

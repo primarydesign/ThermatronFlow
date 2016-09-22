@@ -1,0 +1,82 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700);
+$open-sans: 'Open Sans', sans-serif;
+
+/***************************/
+/* TYPOGRAPHY :: VARIABLES */
+/***************************/
+
+/* font colors */
+
+$colors-emphasis: $noir-2;
+$colors-plain-text: $brown-1;
+$colors-table-cell: $brown-2;
+
+/************************/
+/* TYPOGRAPHY :: RESETS */
+/************************/
+
+%straighten {
+	display: inline-block;
+	transform: skewX($reset);
+}
+
+/*************************/
+/* TYPOGRAPHY :: MODULES */
+/*************************/
+%text--verbose {
+	color: $colors-plain-text;
+	font-size: 0.9em;
+	line-height: 1.7em;
+}
+
+%title--product {
+	color: $colors-emphasis;
+	font: italic 300 2.5em $open-sans;
+	text-transform: uppercase;
+	b {font-weight: 600;}
+}
+
+%title--series {
+	color: $colors-emphasis;
+	font: normal 600 2.5em $open-sans;
+	text-align: left;
+	text-transform: uppercase;
+	i {
+		font-size: 0.8em;
+		font-style: italic;
+		font-weight: 400;
+		small {
+			color: $bluish-2;
+			font-size: 0.7em;
+			font-weight: 600;
+		}
+	}
+}
+%title--model {
+	color: $blue-2;
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+%title--serial-nav {
+	color: $noir-2;
+	font-weight: 600;
+	text-transform: uppercase;
+	i {
+		font-size: 0.85em;
+		font-weight: 400;
+	}
+}
+
+%footer-strong {
+	font-style: italic;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+%footer-lite {
+	font-size: 0.95em;
+	font-weight: 300 !important;
+	opacity: 0.975;
+}
+/*********************/
+/* ARCHAIC :: STYLES */
+/*********************/

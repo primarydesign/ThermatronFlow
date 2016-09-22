@@ -1,0 +1,323 @@
+#hero-slider {
+	@extend %glide;
+	height: calc(100vh);
+	width: 100%;
+    margin-bottom: -100px;
+}
+.hero-slider--carousel {
+	@extend %glide--carousel;
+}
+.hero-slider--wrapper {
+	@extend %glide__wrapper;
+	height: 100%;width: 100%;
+}
+.hero-slider--track {
+	@extend %glide__track;
+	height: 100%;
+	width: 100%;
+}
+
+.hs-slide {
+	@extend %glide__slide;
+	height: 100%;
+	display: inline-block;
+	position: relative;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 1rem;
+	.container {
+		display: block;
+		position: absolute;
+		top: 50%;left: 50%;
+		transform: translate(-50%,-50%);
+	}
+    .linework {
+        position: relative;
+    }
+        svg {
+            transform:scale(2.6);
+            position:absolute;
+            top:-70px;
+            right:-420px;
+            height: 250px;
+            width: 750px;
+        } 
+        .path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            //animation-delay:7s;
+            animation: dash 2s ease-out ;
+          animation-fill-mode: forwards; // Stay on the last frame
+          animation-iteration-count: 1; // Run only once
+        }
+
+        @keyframes dash {
+          from {
+            stroke-dashoffset: 1000;
+          }
+          to {
+            stroke-dashoffset: 0;
+          }
+    }
+}
+.hs-slide--caption {
+	display: inline-block;
+	height: 250px;
+	max-width: 100vw;
+	position: absolute;
+	top: 50%;left: 50%;
+	transform: translate(-50%,-50%);
+	width: 750px;
+    background: url('../img/slides/hs-slide-popup-blue.png') no-repeat;
+    background-position-x: -10px;
+    .hs-slide--smallcaps {
+        color: $ltblue;
+        font-size: .6em;
+        letter-spacing: 4px;
+        @media (max-width: $mobile-threshold - 1) {
+		   font-size: .4em;
+	   }
+    }
+	.inner {
+		display: inline-block;
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%,-50%);
+		color: rgba(#ffffff, 0.95);
+		font: 300 3.3em / 1.35em $open-sans;
+        line-height: 1em;
+		text-shadow: 0 2px .6em rgba(#000, .8);
+		text-transform: uppercase;
+        i {
+            font-size: 1.2em;
+        }
+	}
+	@media (max-width: $mobile-threshold - 1) {
+		opacity: 0 !important;
+	}
+}
+.hs-slide--popup {
+	display: block;
+	height: 432px;
+	width: 772px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	transform: skewX($skew) translateX(-200px);
+	opacity: 0;
+	@media (max-width: $mobile-threshold - 1) {
+		opacity: 0 !important;
+	}
+}
+.hs-slide--header {
+	@extend %straighten;
+	@extend %title--series;
+	color: $background;
+	font-size: 2.5em;
+	font-weight: 500;
+	letter-spacing: 1px;
+	line-height: .85em;
+	text-transform: uppercase;
+	display: block;
+	position: absolute;
+	top: 60%; left: 20%;
+	transform: translate(0%, -50%);
+	i {
+		font-style: italic;
+		font-weight: 300;
+	}
+    strong {
+        font-weight: 600;
+        font-style: italic;
+    }
+}
+.hs-slide--header-indent {
+    margin-left: 15px;   
+}
+#cooling {
+	background-image: url('../img/slides/hs-slides-background-windmill.jpg');
+	.hs-slide--popup {
+		background-image: url('../img/slides/hs-slide-popup-72series.png');
+	}
+    .linework {
+        height: 330px;
+        top: -60px;
+        left: 60px;
+    }    
+
+    .hs-slide--caption, .container {
+        bottom: auto;left: auto;
+        position: absolute;
+        top: 50%;right: 6%;
+        transform: translate(0,-60%);
+        text-align: right;  
+    }
+    .hs-slide--caption .inner {
+        top:auto;left:auto;
+        bottom: 50%;right: 0;
+        transform: translate(-40%, 40%);
+        text-align: left;
+        .hs-slide--smallcaps {
+           display: inline-block;
+           transform: translate(20px,0px);                 
+        }
+    }
+    .hs-slide--header {
+        top: 55%;
+        left: 10%;
+        i {
+           display: inline-block;
+           transform: translate(-10px,0px);    
+        }
+    }
+}
+#shaping {
+	background-image: url('../img/slides/hs-slides-background-sparks.jpg');
+	.hs-slide--popup {
+		background-image: url('../img/slides/hs-slide-popup-custom.png');
+	}
+    .linework {
+        height: 240px;
+        top: -10%;
+        left: -13%;
+    }  
+    .hs-slide--caption, .container {
+        bottom: auto;left: auto;
+        position: absolute;
+        top: 60%;right: 6%;
+        transform: translate(0,-65%);
+        text-align: right;
+    }
+    .hs-slide--caption .inner {
+        top:auto;left:auto;
+        bottom: 50%;right: 0;
+        transform: translate(-70%, 40%);
+        text-align: left;
+        .hs-slide--smallcaps {
+            display: inline-block;
+            transform: translate(25px,0px); 
+        }            
+    }
+    .hs-slide--header {
+        left: 16%;
+        i {
+           display: inline-block;
+           transform: translate(-10px,0px);    
+        }        
+    }
+}
+#reliability {
+	background-image: url('../img/slides/hs-slides-background-semiconductor.jpg');
+	.hs-slide--popup {
+		background-image: url('../img/slides/hs-slide-popup-stainless.png');
+	}
+    .linework {
+        height: 280px;
+        left: 0%;
+        top: -20%;
+    }  
+
+    .hs-slide--caption, .container {
+        position: absolute;
+        bottom: auto;right: auto;
+        top: 65%;left: 8%;
+        transform: translate(0,-88%);
+        text-align: left;
+    }
+    .hs-slide--caption .inner {
+        top:auto;right:auto;
+        bottom: 50%;left: 0;
+        transform: translate(50%,40%);
+        text-align: left;
+        .hs-slide--smallcaps {
+            display: inline-block;
+            transform: translate(30px,0px);                 
+        }
+    }
+    .hs-slide--header {
+        top: 72%;
+        left: 16%;
+        font-size: 3em;
+        strong {
+           display: inline-block;
+           transform: translate(-15px,0px);
+           span {
+               display: inline-block;
+               transform: translate(-15px,0px); 
+            }
+        }            
+    }
+}
+#applications {
+	background-image: url('../img/slides/hs-slides-background-battleship.jpg');
+	.hs-slide--popup {
+		background-image: url('../img/slides/hs-slide-popup-engineering.png');
+	}
+    .linework {
+        height: 230px;
+        left: 2%;
+        top: -12%;
+    }  
+    .hs-slide--caption, .container {
+        top: 60%; right: -20%;
+        position: absolute;
+        transform: translate(-10%,-50%);
+        text-align: right;
+    }
+    .hs-slide--caption .inner {
+        top:auto;left:auto;
+        bottom: 0;right: 0;
+        transform: translate(-50%,-80%);
+        text-align: left;
+        .hs-slide--smallcaps {
+            display: inline-block;
+            transform: translate(20px,0px);
+            font-weight: bold;
+        }
+    }
+    .hs-slide--header {
+        left: 14%;
+        top: 48%;
+        strong {
+           display: inline-block;
+           transform: translate(-15px,0px);
+        }
+    }
+}
+#dependability {
+	background-image: url('../img/slides/hs-slides-background-laser.jpg');
+	.hs-slide--popup {
+		background-image: url('../img/slides/hs-slide-popup-active-cooling.png');
+	}
+    .linework {
+        height: 290px;
+        top: -25%;
+        left:9%;
+    }  
+    .hs-slide--caption, .container {
+        position: absolute;
+        bottom: auto;right: auto;
+        top: 65%;left: 15%;
+        transform: translate(0,-44%);
+        text-align: left;
+    }
+    .hs-slide--caption .inner {
+        top:auto;right:auto;
+        bottom: 50%;left: 0;
+        transform: translate(50%,40%);
+        text-align: left;
+        .hs-slide--smallcaps {
+            display: inline-block;
+            transform: translate(25px,0px); 
+        }
+    }
+   .hs-slide--header {
+        top: 35%;
+        left: 18%;
+       i {
+            display: inline-block;
+            transform: translate(-10px,0px); 
+       }
+    }
+}

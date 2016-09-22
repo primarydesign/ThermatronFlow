@@ -1,0 +1,134 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-weight: inherit;
+font-style: inherit;
+font-size: 100%;
+font-family: inherit;
+vertical-align: baseline;
+}
+html { /*horizontal scrollbar*/
+	height: 100%;
+	margin-bottom: 1px;
+	overflow-y: scroll;
+	overflow-x: none;
+
+	/*background:lightblue;
+	//#072541*/
+	background: linear-gradient(180deg, #092E51 0%, #1c4f8d 100%) no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	width:100%;
+	
+}
+/*BUILD COLUMNS*/
+@media (min-width: 1280px) {
+	#standardHX, #series72, #series74_Robust{
+		//text-align:center;
+		margin:auto;
+		width:1280px;
+		//width:calc(100% - 200px);
+		
+		
+	}
+
+}
+
+.col, .col2{
+	width:100%;
+}
+@media (min-width: 900px) {
+	.col{
+		float:left;
+		display:inline-block;
+		width:50%;
+	}
+	.col2{
+		float:right;
+		width:50%;		
+	}
+
+}	
+
+.whiteBackground{
+	background-color:white;
+}
+
+
+.lb-dataContainer { /*Lightbox X*/
+	margin: 0 auto;
+	padding-top: 5px;
+	*zoom: 1;
+	width: 100%;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+
+	position: absolute;
+	top: 0;
+	width: 90% !important;
+	z-index:999;
+	left: 5%;
+}
+
+
+
+
+
+
+
+svg {
+	//transform:scale(2.6);
+	
+	position:absolute;
+	top:-70px;
+	right:-420px;
+	height: 250px;
+	width: 750px;
+} 
+
+.path {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: dash 1s linear ;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1; 
+	animation-timing-function: linear;
+}
+
+@keyframes dash {
+	from {
+		stroke-dashoffset: 1000;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+
+#timer{
+	position:absolute;
+	background:#4CAF50;
+    	top: 220px;
+	//margin:auto;
+	left:10px;
+	z-index:999;
+}
+
+#auth{
+	position:absolute;
+    	top: 200px;
+	left:10px;
+	z-index:999;
+	
+
+}

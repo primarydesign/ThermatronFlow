@@ -1,0 +1,263 @@
+/*********************/
+/* MODELS :: EXHIBIT */
+/*********************/
+
+.model-exhibit {
+	margin-bottom: 60px;
+	text-align: center;
+	vertical-align: top;
+	display:block;
+	@media (min-width:1100px){
+	        //display: -moz-inline-stack;
+		width: 49%;
+		display:inline-block;
+		//border: 1px solid red;
+	}
+	&:nth-last-child(1) {
+		margin-bottom: 0;
+	}
+
+	.wrapper {
+		display: inline-block;
+		//text-align: left;
+		vertical-align: top;
+		//width: 345px;
+	}
+}
+
+.model-exhibit:nth-child(even){
+	@media (min-width:1100px){
+		//display:inline-block;
+		//border: 1px solid yellow;
+		float:left;
+	}
+}
+
+/*
+.model-exhibit--image {
+	//box-sizing: border-box;
+	//display: inline-block;
+	//min-height: 230px;
+	//padding-right: 50px;
+	//text-align: right;
+	//width: calc(100% - 350px);
+	// background: yellow;
+	img {
+		max-height: 215px;
+		max-width: 80%;
+	}
+}
+@media (max-width: 700px) {
+	.model-exhibit--image, .model-exhibit .wrapper {
+		display: block !important;
+		width: 100% !important;
+	}
+	.model-exhibit--image {
+		//text-align: center;
+		min-height: 120px !important;
+	}
+}*/
+.model-exhibit--title {
+	@extend %title--model;
+	font-size: 1.7em;
+	margin-bottom: 10px;
+	color:$darkBlue;
+	font-weight:500;
+	font-style:italic;
+	b{
+		font-style:normal;
+		font-weight:700;
+	
+	}
+}
+
+.model-exhibit--specs {
+	font-size: 0.7em;
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	width: 100%;
+
+	tr:nth-child(2n+1) {background-color: $bluish-4;}
+	tr:nth-child(2n+2) {background-color: #fff;}
+	td,th {
+		box-sizing: border-box;
+		height: 40px;
+		padding: 5px 15px 5px;
+		//text-align: left;
+		vertical-align: middle;
+		color: #010C39;
+		font-weight: 600;
+	}
+	th {
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+	td {
+		//text-align: left;
+		padding-right: 15px;
+	}
+}
+.model-exhibit--download {
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 6px 20px;
+	position: relative;
+	transform: scale(1);
+	vertical-align: middle;
+	span {
+		color: #ffffff;
+		font-size: .65em;
+		font-weight: 600;
+		text-transform: uppercase;
+		display: block;
+	}
+	&::before {
+		content: '';
+		height:100%;
+		position: absolute;
+		top:0;left:0;
+		transition: all 200ms ease;
+		width:100%;
+		z-index: -1;
+		background: #355E84;
+	}
+	&:hover::before {
+		background: $blue-3;
+	}
+}
+
+
+/*TZIKAS*/
+
+#models .model-exhibit {
+	text-align: center;
+	
+}
+
+
+.model-exhibit .wrapper{
+	position: relative;
+	bottom:0;
+}
+
+#models .model-exhibit--image {
+	//height: 230px;
+	vertical-align:middle;
+	position:relative;
+	
+}
+
+
+#models .model-exhibit--image img{
+	width:100%;
+	border:none;
+}
+
+
+
+
+/********************/
+/* SERIES :: MODELS */
+/********************/
+
+#models {
+	//background: #eaecf1;
+	background:rgba(255, 255, 255, .4);
+}
+
+
+#models .series-informant--title{
+	text-align:left;
+}
+
+.model-specs{
+	padding: 15px;
+	text-align:left;
+
+}
+.model-specs tr{
+	border-bottom: 1px solid black;
+}
+.model-specs th{
+	font-size:12px;
+	border-bottom: 1px solid $darkBlue;	
+	font-weight:normal;
+	padding:.5em;	
+	color:$darkBlue;
+}
+
+
+.model-exhibit--download {
+	transform:skew(-20deg);
+}
+
+
+.model-exhibit .wrapper {
+	display: inline-block;
+	vertical-align: top;
+	//width: 445px;
+}
+
+#dimensions img {
+	//position:relative;
+	//margin-right:-20px;
+	//height:200px;
+
+}
+
+.model-exhibit--download{
+	margin: 2em 0 2em 0;
+	padding: 15px 25px 15px 25px;
+	font-size:1.4em;
+}
+
+
+
+#mobile-header .icons svg {
+	/*
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	height: initial;
+	width: initial;
+
+	width: 15px;
+	margin: 22px 15px;
+	*/
+
+
+	margin-top:10px;
+}
+
+
+
+.model-exhibit--download span {
+	color: #ffffff;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: block;
+	transform:skew(20deg);
+}
+
+.model-exhibit--download b{
+    font-style: normal;
+    font-weight: bolder;
+}
+
+
+
+.model-exhibit--download::before {
+	content: '';
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: all 200ms ease;
+	transition: all 200ms ease;
+	width: 100%;
+	z-index: -1;
+	background: #418DD4;
+	background:$lightBlue;
+	
+}
+

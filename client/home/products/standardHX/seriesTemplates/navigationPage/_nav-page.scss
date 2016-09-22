@@ -1,0 +1,174 @@
+
+
+/*Use to be _serial-nav.scss*/
+%serial-nav {
+	a{
+	    margin: 3px;
+	}
+	ul {
+		height: 100%;
+		width: 100%;
+		font-size: 0 !important;
+	}
+	li {
+		display: inline-block;
+		height: 100%;
+		list-style: none;
+		background-color: rgba($bluish-3, .8);
+		font-size: .85rem !important;
+		//@media (max-width:900px) {
+		//	font-size: .75rem !important;
+		
+		//}
+		font-weight: 600;
+    		color: #010C40;	
+    		color: $darkBlue;
+		text-transform:uppercase;
+				
+		
+		text-align: center;
+		padding: 10px 0 40px 0;
+		font-size: 0.75em;
+    		white-space: nowrap;	z
+		& > * {
+			@extend %title--serial-nav;
+			z-index: 2;
+		}
+	}
+	li::before {
+		@extend %pseudo;
+		transition: all 100ms ease-in-out;
+	}
+	li:hover {
+		&::before {
+			background: rgba($blue-4, 0.4);
+		}
+	}
+}
+%serial-nav.is-stuck {
+	left: 0;right: 0;
+	position: fixed;
+	top: $offset-normal + $sticky-offset;
+
+}
+@mixin serial-nav ($height, $count, $gap, $skew:0) {
+	$gaps: ($count - 1) * $gap;
+	$angle: abs($skew);
+	$offset: tan($angle) * $height;
+	$spacing: $gaps + ($offset);
+	@if unit($skew) != deg {
+		@error "$skew argument must be in degrees";
+	}
+
+	@extend %serial-nav;
+	height: $height;
+	li {
+		@if ($skew != 0) {
+			@include slanting ($skew);
+		}
+		box-sizing: border-box !important;
+		line-height: $height;
+		margin-right: $gap;
+		width: calc((100% - #{$spacing}) / #{$count});
+		&:last-of-type {margin-right:0;}
+		@media (max-width:1100px){
+			width: calc((100% - #{$spacing}) / #{$count});
+
+		}
+	}
+}
+
+
+
+
+//****//
+
+#series-exhibits-nav {
+	@include serial-nav(32px, 7, 5px, -25deg);
+	padding-top: 35px;
+ 	a li { font-size: .9em; }
+	@media (max-width: 799px) {
+		a li  {
+			font-size: .75em;
+		}
+	}
+	@media (max-width: 1060px) {
+		li { width: calc(((100% - 5px) / 7) - 10px); }
+		li:nth-child(4) { width: calc(((100% - 5px) / 7) + 30px); }
+	}
+}
+#series-informants-nav {
+	@include serial-nav(32px, 7, 5px, -25deg);
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 100%;
+	a li {
+		font-size: 0.75em;
+	}
+	@media (min-width: 800px) {
+		a li  {
+			font-size: .85em;
+		}
+	}
+
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */	
+}
+
+.wr-serial-nav {
+	display: none;
+	padding-top: 90px;
+	position: relative;
+	z-index: 10;
+	@media (min-width: 900px) {
+		display: block;
+	}
+}
+.sticky-nav {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+.per-stuck, .is-stuck {
+	left: 0;right: 0;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 35px 50px 0;
+	position: fixed;
+	//top: 100px !important;
+	width: 90% !important;
+	z-index: 5;
+	@include nav-desktop {
+		max-width: 1000px;
+		//top: 100px !important;
+		width: 100%;
+	}
+}
+
+#serial-nav-74-series-standard {
+	small { display: none; }
+}
+
+#series-robust-nav{  //_sticky_nav.scss
+	@include serial-nav(32px, 4, 5px, -25deg);
+	a li{ font-size: .9em; }
+	@media (max-width: 799px) {
+		a li  {
+			font-size: .80em;
+		}
+	}
+	@media (max-width: 1060px) {
+	}
+}
+
+
+#series-informants-nav li a {
+    font-size: .85em;
+    white-space: nowrap;
+}

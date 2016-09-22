@@ -1,0 +1,129 @@
+/*
+ * BREAKPOINT :: MOBILE SCREENS
+ * trigger styles for phones, tablets
+ */
+@mixin nav-mobile() {
+	@media (max-width: $mobile-threshold - 1) { @content; }
+}
+/*
+ * BREAKPOINT :: LARGE SCREENS
+ * trigger styles for desktops, etc
+ */
+@mixin nav-desktop() {
+	@media (min-width: $mobile-threshold) { @content; }
+}
+
+/*
+ * TRANSFORMATION :: SKEWING
+ * slants applied element
+ * resets inner contents
+ */
+@mixin slanting ($deg) {
+	transform: skew($deg);
+	transform-origin: bottom left;
+	& > * {
+		display: inline-block;
+		transform: skewX(0 - $deg);
+	}
+}
+
+@mixin btn-slanted($height, $width, $angle) {
+	box-sizing: border-box;
+	display: inline-block;
+	height: $height;
+	line-height: $height;
+	min-width: $width;
+	position: relative;
+	&::before {
+		content: '';
+		height: 100%;
+		position: absolute;
+		top:0; left:0;
+		width: 100%;
+		z-index: -1;
+		transform: skewX(-($angle));
+		transform-origin: bottom left;
+	}
+	.inner {
+		text-align: center;
+		$opposite: ( tan($angle) * $height);
+		display: block;
+		transform: translateX($opposite/2);
+		width: 100%;
+	}
+}
+
+
+@mixin nav-font-tier1() {
+	color: $nav-font-color;
+	font-family: $nav-font-family;
+	font-size: .75em;
+	font-weight: 600;
+	letter-spacing: 1.75px;
+};
+@mixin nav-font-tier2() {
+	color: $nav-font-color;
+	font-family: $nav-font-family;
+	font-size: .70em;
+	font-weight: 600;
+	letter-spacing: 1.9px;
+};
+@mixin nav-font-tier3() {
+	color: $nav-font-color;
+	font-family: $nav-font-family;
+	font-size: .83em;
+	font-weight: 600;
+	em {
+		color: rgba($nav-font-color, 0.70);
+		font-weight: 600;
+		font-style: italic;
+		small {
+			font-size: .7em;
+		}
+	}
+};
+
+
+@mixin center-absolute() {
+	top: 50%;left:50%;
+	transform: translate(-50%,-50%);
+};
+
+@mixin inline-block-full() {
+	display: inline-block;
+	vertical-align: top;
+};
+
+@mixin skew-inner($width, $height, $skew, $container:'outer') {
+	height: $height;
+	@if $container == 'outer' {width: $width + px;}
+	@if $container == 'inner' {width: $width + (tan(abs($skew))*$height) + px;}
+	transform: skewX($skew);
+	@if $skew < 0 {transform-origin: top left;}
+	@if $skew > 0 {transform-origin: top right;}
+	.inner {
+		height: $height;
+		margin: 0 auto;
+		@if $container == 'outer' {width: $width - (tan(abs($skew))*$height) + px;}
+		@if $container == 'inner' {width: $width + px;}
+		transform: skewX(-$skew);
+	}
+};
+
+@mixin skew-pseudo($width, $height, $skew, $container:'outer') {
+	height: $height;
+	@if $container == 'outer' {width: $width + px;}
+	@if $container == 'inner' {width: $width + (tan(abs($skew))*$height) + px;}
+	&:before {
+		content: '';
+		height: $height;
+		position: absolute;
+		top: 0;
+		height: $height;
+		@if $container == 'outer' {width: $width - (tan(abs($skew))*$height) + px;}
+		@if $container == 'inner' {width: $width + px;}
+		transform: skewX($skew);
+		@if $skew < 0 {left:0;transform-origin: top left;}
+		@if $skew > 0 {right:0;transform-origin: top right;}
+	}
+};

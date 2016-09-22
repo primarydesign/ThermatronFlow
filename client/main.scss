@@ -1,0 +1,45 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700);
+
+@import 'globalStyles/vendors/_chartist-settings.scss';
+@import 'globalStyles/vendors/_chartist.scss';
+@import 'globalStyles/vendors/_glide-core.scss';
+@import 'globalStyles/vendors/_glide-theme.scss';
+@import 'globalStyles/vendors/_lightbox.scss';
+
+//@import 'globalStyles/helpers/_animations.scss';
+@import 'globalStyles/helpers/_functions.scss';
+@import 'globalStyles/helpers/_mixins.scss';
+@import 'globalStyles/helpers/_variables.scss';
+
+@import 'globalStyles/themes/_colors.scss';
+@import 'globalStyles/themes/_defaults.scss';
+@import 'globalStyles/themes/_layout.scss';
+
+@import 'globalStyles/themes/_typography.scss';
+
+@import 'home/products/standardHX/seriesTemplates/navigationSite/_nav-header.scss';
+@import 'home/products/standardHX/seriesTemplates/navigationSite/_nav-mobile.scss';
+@import 'home/products/standardHX/seriesTemplates/navigationPage/_nav-page.scss';
+@import 'home/products/standardHX/seriesTemplates/backToTop/_back-top-top.scss';
+@import 'home/products/standardHX/seriesTemplates/models/_models.scss';
+@import 'home/products/standardHX/seriesTemplates/performance/_performance.scss';
+@import 'home/products/standardHX/seriesTemplates/footer/_footer.scss';
+@import 'home/products/standardHX/seriesTemplates/wrapper/_wrapper.scss';
+@import 'home/products/standardHX/seriesTemplates/summary/_summary.scss';
+@import 'home/products/standardHX/seriesTemplates/specifications/_specifications.scss';
+@import 'home/products/standardHX/seriesTemplates/partNumbers/_partNumbers.scss';
+@import 'home/products/standardHX/seriesTemplates/seriesIntro/_seriesIntro.scss';
+@import 'home/products/standardHX/seriesTemplates/buildingBlocks/_buildingBlocks.scss';
+@import 'home/products/standardHX/seriesTemplates/mobileMenu/_mobileMenu.scss';
+
+@import 'home/_home.scss';
+	//@import 'home/products/_products.scss';
+		@import 'home/products/standardHX/_standardHX.scss';
+			@import 'home/products/standardHX/series72/_series72.scss';
+			//@import 'home/products/standardHX/series74Robust/_series74Robust.scss';
+			@import 'home/products/standardHX/series74Robust/_series74_Robust.scss';
+
+
+
+
+

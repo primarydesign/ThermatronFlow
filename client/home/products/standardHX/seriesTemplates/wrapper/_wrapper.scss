@@ -1,0 +1,31 @@
+.page-wrapper, .content-wrapper {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	&::after, &::before {
+		display: none;
+		content: '';
+		height: 100%;
+		position: absolute;
+		top:0;left:0;
+		width: 100%;
+	}
+}
+.content-wrapper {
+
+}
+.section {
+	box-sizing: border-box;
+	width: 100%;
+}
+.section--content {
+	box-sizing: content-box;
+	display: block;
+	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 900px;
+	width: 100%;
+}

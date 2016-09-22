@@ -1,0 +1,101 @@
+<template name="nav">
+	<!--<div id="timer">{{clock}}</div>-->
+	
+	<header id="nav-header">
+		<nav id="navbar" role="navigation">
+			<ul class="nav-tier nt-1">
+				<div class="brand">
+					<!--<div class="logo"><img src="/assets/img/logo_thermatron.svg" alt="Thermatron"/></div>-->
+					<div class="logo"><img src="robust-images/logo_thermatron.svg" alt="Thermatron"/>
+						<div id="triangle"></div>
+					</div>
+					<!--<div id="triangle"><img src="robust-images/logo_thermatron.svg" alt="Thermatron"/></div>-->
+
+				</div>
+				
+				<li><span><a href="home">Home</a></span></li>
+				<li class="has-children"><span><a>Products</a></span>
+					<ul class="nav-tier nt-2">
+						<li class="has-children"><span><a href="standardHX">Standard Heat Exchangers</a></span>
+							<ul class="nav-tier nt-3">
+								<!--<li><span><a href="/series-72/">72 WHERE ARE YOU?<em>Series</em></a></span></li>-->
+								<li><span><a href="series72">72 <em>Series</em></a></span></li>
+								<li><span><a href="series73">73 <em>Series</em></a></span></li>
+								<li><span><a href="series74">74 <em>Series</em></a></span></li>
+								<li><span><a href="series74_Robust">74 <em>Series <small>Robust</small></em></a></span></li>
+								<li><span><a>75 <em>Series</em></a></span></li>
+								<li><span><a>76 <em>Series</em></a></span></li>
+								<li><span><a>77 <em>Series</em></a></span></li>
+							</ul>
+						</li>
+						<li><span><a>Custom Heat Exchangers</a></span></li>
+						<li><span><a>Cooling systems</a></span></li>
+						<li><span><a>Cold Plates</a></span></li>
+						<li><span><a>Components</a></span></li>
+						<li><span><a>Chillers</a></span></li>
+					</ul>
+				</li>
+				<li><span><a href="engineering">Engineering</a></span></li>
+				<li><span><a href="about">About Us</a></span></li>
+				<li><span><a href="contact">Contact</a></span></li>
+			</ul>
+		</nav>
+
+
+		<div id="mobile-header">
+			<div class="brand">
+				<!--<div class="logo"><img src="/assets/img/logo_thermatron.svg" alt="Thermatron"/></div>-->
+				<div class="logo"><img src="robust-images/logo_thermatron.svg" alt="Thermatron"/></div>
+
+			</div>
+			
+			<ul class="icons"><li><a class="nx-trigger open">
+						<svg class="icon icon-menu" height="40px" width="40px">
+							<symbol id="icon-menu" viewBox="0 0 1024 1024">
+							<title>menu</title>
+							<path class="path1" fill="#fff" d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"></path>
+							</symbol>
+							<use xlink:href="#icon-menu"></use>
+						</svg>
+					</a></li></ul>
+		</div>
+
+	</header>
+	<nav id="mobile-nav" class="nx-hidden" role="navigation">
+		<ul class="nav-tier nt-1">
+			<li><a href="home">Home</a></li>
+			<li class="has-children"><a>Products</a>
+				<ul class="nav-tier nt-2 nx-right">
+					<li class="return"><a>Back</a></li>
+					<li class="has-children"><a href="standardHX">Standard Heat Exchangers</a>
+						<ul class="nav-tier nt-3 nx-right">
+							<li class="return"><a>Back</a></li>
+							<li><a>Overview</a></li>
+							<li><a href="series72">72 Series</a></li>
+							<li><a>73 Series</a></li>
+							<li><a href="">74 Series</a></li>
+							<li><a href="series74_Robust">74 Robust Series</a></li>							
+							<li><a>75 Series</a></li>
+							<li><a>76 Series</a></li>
+							<li><a>77 Series</a> </li>
+						</ul>
+					</li>
+					<li><a>Custom Heat Exchangers</a></li>
+					<li><a>Cooling systems</a></li>
+					<li><a>Cold Plates</a></li>
+					<li><a>Components</a></li>
+					<li><a>Chillers</a></li>
+				</ul>
+			</li>
+			<li><a>Engineering</a></li>
+			<li><a>About Us</a></li>
+			<li><a>Contact</a></li>
+		</ul>
+	</nav>
+	<div id="swipe-overlay" style="height:100%;width:100%;background:red;"></div>
+
+	<!--</header>-->
+	{{> Template.dynamic template=template}}
+	
+</template>
+

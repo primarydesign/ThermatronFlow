@@ -1,0 +1,79 @@
+
+$offset-mobile: 80px;
+$offset-normal: 100px;
+$sticky-offset: 35px;
+$mobile-threshold: 1100px;
+
+/******************************/
+/* TRANSFORMATIONAL VARIABLES */
+/******************************/
+
+$skew: -25deg;
+$reset: 25deg;
+
+/*****************/
+/* FONT FAMILIES */
+/*****************/
+
+$open-sans: 'Open Sans', sans-serif;
+
+/*****************/
+/* COLOR PALETTE */
+/*****************/
+
+
+$darkBlue: rgba(7,37,65,1);
+$medBlue: rgba(25, 72, 128, 1);
+$lightBlue: rgba(108, 175, 229, 1);
+$btnBlue: rgba(79,150,207,1);
+
+$gray: rgba(90,90,90,1);
+$ltGray: rgba(230,233,235,1);
+
+$trans : rgba(black, 0);
+
+$noir-1: #061523;
+$noir-2: #010C40;
+$noir-3: #010C39;
+
+$blue-1: #355C84;
+$blue-2: #245684;
+$blue-3: #2880C4;
+
+$brown-1: #3A3939;
+$brown-2: #5A5A5A;
+$brown-3: #737373;
+
+$bluish-1: #7E8598;
+$bluish-2: #91AAC1;
+$bluish-3: #C3D1E6;
+$bluish-4: #CEE6F9;
+
+$white-1: #CACED1;
+$white-2: #FEFCFC;
+
+/**********************/
+/* obselete variables */
+/**********************/
+
+$open-sans: 'Open Sans', sans-serif;
+$blue-O1: #061523;
+$blue-O2: #354368;
+$blue-O3: #1669A9;
+$blue-4: #0182E2;
+$blue-5: #0e84dd;
+$transparent: rgba(#000,0);
+$slant-deg: 25deg;
+$nav-colors-brand: rgba($blue-O1,1.00);
+$nav-colors-tier-1: rgba(07,37,65,.75);
+$nav-colors-tier-2: rgba($blue-O3,0.90);
+$nav-colors-tier-3: rgba($blue-4,0.88);
+$nav-colors-select: lighten(rgba($blue-5,0.90),10%);
+$nav-colors-mobile: rgba($blue-O2,1.00);
+$nav-colors-tab: $transparent;
+$nav-colors-mb-garnish: tint($nav-colors-mobile, 8.0%);
+$nav-font-family: $open-sans;
+$nav-font-color: rgba(#ffffff,0.95);
+$footer-font-color: $blue-O1;
+$blue-pale: #C3D1E6;
+$blue-pale-trans: rgba($blue-pale, .59);

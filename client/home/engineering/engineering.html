@@ -1,0 +1,125 @@
+<template name="engineering">
+
+
+	<div id="engineering" class="whiteBackground">	
+		{{globalTimer}}
+		{{#if owner}}
+		<span class="timer">adsfsa {{timer}}</span>
+		{{else}}
+		<p>Log in to make changes</p>
+		{{/if}}
+		<br>
+		<p id="blah" class="cms" contentEditable="{{owner}}">{{blah}}</p>
+		<p id="blah2" class="cms" contentEditable="{{owner}}">{{blah2}}</p>
+		<p id="blah3" class="cms" contentEditable="{{owner}}">{{blah3}}</p>
+		<br>
+		<br>
+		<ul>
+			<li id="listItem" class="cms" contentEditable="{{owner}}">{{listItem}}</li>
+			<li></li>
+			<li></li>
+		</ul>		
+		<br>
+		<br>
+		
+		
+			{{>signIn}}
+
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			{{>img}}
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>		
+
+
+		<br>
+		<!--<img src= "/upload/imgres.jpg" />-->
+			
+		<br>
+
+
+
+
+		owner: {{owner}}
+		<button id="logOut">logOut</button>	
+	</div>
+</template>
+
+
+
+<template name="signIn">
+	
+  	<br><input type="text" id="password" placeholder="hard to spell deli meat"><br>
+  	<input type="submit" value="Submit" id="submit">
+	<!--
+		<button id="logIn">LogIn</button>
+	-->	 
+</template>
+
+
+
+
+
+
+
+<template name="img">
+    <div class="container">
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        {{> dropzone }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="panel">
+		<br><br><br>
+            <p>
+                {{> uploadedInfo uploads }}
+            </p>
+        </div>
+    </div>
+</template>
+
+
+<template name="uploadedInfo">
+    <div class="documentList">
+        <ul class="list-inline">
+            {{#each this}}
+                <li class="documentItem">
+			<!--<a href="/upload/{{path}}"><img src="{{src}}"></a>-->
+			<img class="cms" src="{{src}}">
+			<br/>
+			<div class="details">
+
+   	                     {{> dropzone }}
+				
+			    <label>{{ name }}</label> <br/>
+			    {{ size }} B<br>
+			    {{#if _id}}
+				<a class="btn btn-danger deleteUpload">Delete</a>
+			    {{/if}}
+			</div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</template>
+
+
