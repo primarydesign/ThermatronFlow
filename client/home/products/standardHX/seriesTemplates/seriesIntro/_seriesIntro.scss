@@ -1,7 +1,9 @@
-
+//THIS PAGE STILL NEEDS TO BE ISOLATED
+//
 /*******************/
 /* SERIES :: INTRO */
 /*******************/
+
 
 .series-intro {
 	padding-top: 110px !important;
@@ -36,8 +38,21 @@
 	@media (min-width: 900px){ 
 		width: 60%;
 	}
+
+
 	p {
-		margin-bottom: 15px;
+		#series72{ //THIS IS THE KIDNA CRAP
+			//margin-bottom: 15px;
+		
+		}
+
+		#standardHX{ // THIS IS THE KINDA CRAP
+			//margin-bottom: 15px;
+		
+		}
+
+		
+
 		color:#464646;
 	}
 	//color:#464646;
@@ -141,6 +156,11 @@
 		background: $blue-3;
 	}
 }
+
+
+
+
+
 
 
 
